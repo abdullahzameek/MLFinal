@@ -10,13 +10,8 @@ import scipy.io.wavfile as wav
 features = np.load('%s.npy' % "musicFeatures")
 labels = np.load('%s.npy' % "musicLabels")
 
+model = load_model('train1.h5')
 
-
-# model = train(features, labels)
-
-# model.save('train1.h5')
-# model = load_model('train1.h5')
-
-# pred = predict(model, "/home/abdullahz/Desktop/pyAudio/pyAudioClassification/gel.wav")
-# print_leaderboard(pred, "/home/abdullahz/Desktop/pyAudio/pyAudioClassification/data")
+pred = predict(model, "/home/abdullahz/Desktop/pyAudio/gel.wav")
+print_leaderboard(pred, "/home/abdullahz/Desktop/pyAudio/data")
 
